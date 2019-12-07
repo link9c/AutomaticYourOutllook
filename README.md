@@ -15,8 +15,8 @@
 # send操作时可不传uid
 {"start": "2019-11-30 10:00", 
 "end": "2019-11-30 11:00", 
-"sender": "chenyulei@microport.com",
-"receiver": ["chenyulei@microport.com"],
+"sender": "xxx@xxx.com",
+"receiver": ["xxx@xxx.com"],
 "subj": "会议测试邮件,修复了组织者,可以进行应答", 
 "description": "欢迎参加会议！",
 "location": "xxxxx7F会议室", 
