@@ -79,7 +79,8 @@ class MeetingMail(object):
 
     @classmethod
     def send_mail(cls, sender, receiver, msg):
-        host = 'mail.microport.com.cn'
+	# smpt mail server
+        host = 'XXX.mail.com'
         port = 25
         smtp = smtplib.SMTP(host, port)
         try:
@@ -165,20 +166,17 @@ class MeetingMail(object):
 
 if __name__ == '__main__':
     mail = MeetingMail()
-    # mail.json_rec({"start": "2019-11-30 9:00", "end": "2019-11-30 10:00", "sender": "chenyulei@microport.com",
-    #                "receiver": ['chenyulei@microport.com'],
+    # mail.json_rec({"start": "2019-11-30 9:00", "end": "2019-11-30 10:00", "sender": "xxx@xxx.com",
+    #                "receiver": ['xxx@xxx.com'],
     #                "subj": "会议测试邮件,修复了组织者,可以进行应答", "description": "qweqeq",
     #                "location": "xxxxx7F会议室"，'operation': 'send'})
-    # mail.json_rec({"start": "2019-11-30 10:00", "end": "2019-11-30 11:00", "sender": "chenyulei@microport.com",
-    #                "receiver": ['chenyulei@microport.com'],
+    # mail.json_rec({"start": "2019-11-30 10:00", "end": "2019-11-30 11:00", "sender": "xxx@xxx.com",
+    #                "receiver": ['xxx@xxx.com'],
     #                "subj": "会议测试邮件,修复了组织者,可以进行应答", "description": "qweqeq",
     #                "location": "xxxxx7F会议室", 'uid': 'fd973b4c-111c-11ea-9671-005056c00008'，'operation': 'update'})
 
-    # mail.json_rec({"start": "2019-11-30 10:00", "end": "2019-11-30 11:00", "sender": "chenyulei@microport.com",
-    #                "receiver": ['chenyulei@microport.com'],
+    # mail.json_rec({"start": "2019-11-30 10:00", "end": "2019-11-30 11:00", "sender": "xxx@xxx.com",
+    #                "receiver": ['xxx@xxx.com'],
     #                "subj": "会议测试邮件,修复了组织者,可以进行应答", "description": "qweqeq",
     #                "location": "xxxxx7F会议室", 'uid': 'fd973b4c-111c-11ea-9671-005056c00008', 'operation': 'cancel'})
-    mail.json_rec({"start": "2019-12-06 14:00", "end": "2019-12-06 14:29", "sender": "mjwei@microport.com",
-                   "receiver": ["chenyulei@microport.com"], "subj": "协同办公小组周会",
-                   "description": "你好,\r\n 我们将在2019-12-06 11:00,于7F信息管理部小项目室召开协同办公小组周会", "location": "7F信息管理部小项目室",
-                   "operation": "send", "uid": "a5e20d50-17e3-11ea-bbbb-4023437e7d6a"})
+    
