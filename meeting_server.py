@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request, make_response, abort
 import meetingMailApi
 
+
 app = Flask(__name__)
+app.debug = False
 
 MY_URL = ''
 
@@ -10,12 +12,14 @@ MY_URL = ''
 @app.route('/meeting_server/', methods=['POST'])
 def post_task():
     mail = meetingMailApi.MeetingMail()
-    # print(request.form['start'])
+    # print(request)
     # print(request.json)
     if not request.json:
         abort(404)
     result = mail.json_rec(request.json)
-    return result
+    print(result)
+    # print(jsonify(result))
+    return jsonify(result)
 
 
 # 404处理
